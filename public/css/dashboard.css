@@ -1,0 +1,197 @@
+body {
+    min-height: 100vh;
+    background: #f3f6f9;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar {
+    width: 250px;
+    min-height: 100vh;
+    background: #1e1e2d;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    transition: all 0.3s ease;
+    z-index: 1050;
+}
+
+.sidebar h5 {
+    color: #fff;
+}
+
+.sidebar .nav-link {
+    color: #cfd8dc;
+    border-radius: 8px;
+    padding: 10px 15px;
+}
+
+.sidebar .nav-link:hover,
+.sidebar .nav-link.active {
+    background: #34344e;
+    color: #fff;
+}
+
+/* ===== CONTENU ===== */
+.content {
+    margin-left: 250px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+    background: #fff;
+    height: 60px;
+    padding: 0 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* ===== OVERLAY MOBILE ===== */
+#overlay {
+    display: none;
+}
+
+#overlay.show {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 1040;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 991px) {
+    .sidebar {
+        left: -260px;
+    }
+
+    .sidebar.show {
+        left: 0;
+    }
+
+    .content {
+        margin-left: 0;
+    }
+}
+
+/* ===== DASHBOARD STATS ===== */
+.stat-box {
+    background: #fff;
+    border-radius: 16px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.stat-bo {
+    background: #d8dc03;
+    border-radius: 16px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.stat {
+    background:  #0689e074;
+    border-radius: 16px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.stat-boxs {
+    background: #a1f70c;
+    border-radius: 16px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.stat-box {
+    background: #705877e2;
+    border-radius: 16px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-box:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+}
+
+.stat-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    color: #fff;
+}
+
+.stat-info h5 {
+    margin: 0;
+    font-size: 20px;
+    color: #fff;
+}
+
+.stat-info h2 {
+    margin: 0;
+    font-size: 1.9rem;
+    font-weight: 700;
+    color:#fff;
+}
+
+/* ===== Couleurs ===== */
+.stat-green .stat-icon {
+    background: linear-gradient(135deg, #2bff92, #1fa463);
+}
+
+.stat-blue .stat-icon {
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
+}
+
+.stat-orange .stat-icon {
+    background: linear-gradient(135deg, #ffb347, #ffcc33);
+}
+
+.stat-purple .stat-icon {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+}
+
+/* Colonne principale */
+.content {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Footer toujours en bas */
+footer {
+    margin-top: auto;
+}
