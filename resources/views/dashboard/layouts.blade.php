@@ -26,14 +26,42 @@
         </div>
 
         <ul class="nav nav-pills flex-column gap-2">
-            <li><a class="nav-link active " href="#"><i class="bi bi-speedometer2 me-2 "></i> Dashboard</a></li>
-            <li><a class="nav-link " href="#"><i class="bi bi-journal-text me-2"></i> Formations</a></li>
-            <li><a class="nav-link " href="#"><i class="bi bi-person-badge me-2"></i> Formateurs</a></li>
-            <li><a class="nav-link " href="#"><i class="bi bi-people me-2"></i> Apprenants</a></li>
-            <li class="mt-auto">
-                <a class="nav-link  text-danger" href="#"><i class="bi bi-box-arrow-right me-2"></i> Déconnexion</a>
-            </li>
-        </ul>
+
+    <li>
+        <a class="nav-link {{ Route::is('dashboard.index') ? 'active' : '' }}"
+           href="{{ route('dashboard.index') }}">
+            <i class="bi bi-speedometer2 me-2"></i> Dashboard
+        </a>
+    </li>
+
+    <li>
+        <a class="nav-link {{ Route::is('formations.*') ? 'active' : '' }}"
+           href="{{ route('formations.liste') }}">
+            <i class="bi bi-journal-text me-2"></i> Formations
+        </a>
+    </li>
+
+    <li>
+        <a class="nav-link {{ Route::is('formateurs.*') ? 'active' : '' }}"
+           href="{{ route('formateurs.liste') }}">
+            <i class="bi bi-person-badge me-2"></i> Formateurs
+        </a>
+    </li>
+
+    <li>
+        <a class="nav-link {{ Route::is('apprenants.*') ? 'active' : '' }}"
+           href="{{ route('apprenants.liste') }}">
+            <i class="bi bi-people me-2"></i> Apprenants
+        </a>
+    </li>
+
+    <li class="mt-auto">
+        <a class="nav-link text-danger" href="#">
+            <i class="bi bi-box-arrow-right me-2"></i> Déconnexion
+        </a>
+    </li>
+
+</ul>
     </aside>
 
     {{-- ===== CONTENU ===== --}}

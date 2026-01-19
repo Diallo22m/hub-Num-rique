@@ -26,12 +26,14 @@ body {
     color: #cfd8dc;
     border-radius: 8px;
     padding: 10px 15px;
+    font-size: 20px;
 }
 
 .sidebar .nav-link:hover,
 .sidebar .nav-link.active {
-    background: #34344e;
+    background: #ec4a4a;
     color: #fff;
+    font-size:18px;
 }
 
 /* ===== CONTENU ===== */
@@ -110,7 +112,7 @@ body {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .stat-boxs {
-    background: #a1f70c;
+    background: #0cf733;
     border-radius: 16px;
     padding: 20px;
     display: flex;
