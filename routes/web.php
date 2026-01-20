@@ -5,6 +5,7 @@ use App\Http\Controllers\FormateurController;
 use App\Http\Controllers\FormationController;
 use App\Http\Controllers\InscriptionController;
 use App\Http\Controllers\ParticipantController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 // Route::get('/', function () {
@@ -32,3 +33,9 @@ Route::get('apprenant/ajout', [ParticipantController::class,'ajoutApprenant'])->
 
 //La route qui permet d'afficher la liste des inscriptions
 Route::get('inscriptions', [InscriptionController::class,'inscriptions'])->name('inscriptions.liste');
+
+
+
+
+//Route pour la partie utilisateur (visiteur)
+Route::get('/', [UserController::class,'index'])->name('accueil.index');

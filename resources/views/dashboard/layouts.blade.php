@@ -54,6 +54,13 @@
             <i class="bi bi-people me-2"></i> Apprenants
         </a>
     </li>
+    <li>
+    <a class="nav-link {{ Route::is('inscriptions.*') ? 'active' : '' }}"
+       href="{{ route('inscriptions.liste') }}">
+        <i class="bi bi-pencil-square me-2"></i> Inscriptions
+    </a>
+</li>
+
 
     <li class="mt-auto">
         <a class="nav-link text-danger" href="#">
