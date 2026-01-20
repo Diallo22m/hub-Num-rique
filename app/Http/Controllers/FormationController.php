@@ -11,4 +11,9 @@ class FormationController extends Controller
     public function formations(){
         return view('formation.liste-formation');
     }
+    //La fonction qui permet d'afficher le formulaire d'ajout de formation
+
+    public function ajourformation(){
+        return view('formation.ajout-formation');
+    }
 }

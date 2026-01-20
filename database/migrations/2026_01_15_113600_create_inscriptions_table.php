@@ -16,7 +16,7 @@ return new class extends Migration
         $table->foreignId('id_participant')->constrained('participants')->onDelete('cascade');
         $table->foreignId('id_formation')->constrained('formations')->onDelete('cascade');
         $table->timestamp('date_inscription')->useCurrent();
-        $table->string('statut')->default('En attente'); // En attente / Validée / Rejetée
+        $table->enum('statut', ['En attente', 'Validée', 'Rejetée'])->default('En attente');
         $table->timestamps();
     });
     }

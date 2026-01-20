@@ -11,4 +11,9 @@ class ParticipantController extends Controller
     public function apprenants(){
         return view('participant.liste_apprenant');
     }
+    //La fonction qui permet d'afficher le formulaire d'ajout d'apprenant
+
+    Public function ajoutApprenant(){
+        return view('participant.ajout-apprenant');
+    }
 }
