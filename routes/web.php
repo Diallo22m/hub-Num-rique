@@ -30,6 +30,8 @@ Route::get('formateurs/ajout', [FormateurController::class,'ajoutFormateur'])->n
 Route::get('apprenants', [ParticipantController::class,'apprenants'])->name('apprenants.liste');
 //La route qui permet d'afficher le formulaire d'ajout d'apprenant
 Route::get('apprenant/ajout', [ParticipantController::class,'ajoutApprenant'])->name('participant.ajout');
+//La route qui permet de valider l'ajout d'un apprenant
+Route::post('apprenant/ajout/validation', [ParticipantController::class,'store'])->name('participant.store');
 
 //La route qui permet d'afficher la liste des inscriptions
 Route::get('inscriptions', [InscriptionController::class,'inscriptions'])->name('inscriptions.liste');

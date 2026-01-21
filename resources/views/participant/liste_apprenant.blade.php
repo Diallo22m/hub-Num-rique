@@ -35,19 +35,21 @@
 
                 <tbody>
                     {{-- Données fictives --}}
-                    <tr>
-                        <td>1</td>
-                        <td>Diallo</td>
-                        <td>Mamadou Oury</td>
-                        <td>622 00 00 01</td>
-                        <td>Yéolé</td>
-                        <td>Etudiant</td>
-                        <td class="text-center">
-                            <button class="btn btn-sm btn-outline-primary me-1"><i class="bi bi-eye"></i></button>
-                            <button class="btn btn-sm btn-outline-warning me-1"><i class="bi bi-pencil-square"></i></button>
-                            <button class="btn btn-sm btn-outline-danger"><i class="bi bi-trash"></i></button>
-                        </td>
-                    </tr>
+                    @foreach ($participants as $key => $participant)
+                        <tr>
+                            <td>{{ $key + 1 }}</td>
+                            <td>{{ $participant->nom }}</td>
+                            <td>{{ $participant->prenom }}</td>
+                            <td>{{ $participant->telephone }}</td>
+                            <td>{{ $participant->adresse }}</td>
+                            <td>{{ $participant->profession }}</td>
+                            <td class="text-center">
+                                <button class="btn btn-sm btn-outline-primary me-1"><i class="bi bi-eye"></i></button>
+                                <button class="btn btn-sm btn-outline-warning me-1"><i class="bi bi-pencil-square"></i></button>
+                                <button class="btn btn-sm btn-outline-danger"><i class="bi bi-trash"></i></button>
+                            </td>
+                        </tr>
+                    @endforeach
                 </tbody>
             </table>
         </div>
