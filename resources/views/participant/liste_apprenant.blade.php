@@ -8,7 +8,7 @@
     </h4>
 
     {{-- Bouton pour ouvrir le modal --}}
-    <button class="btn btn-primary btn-sm fs-5"
+    <button class="btn  btn-sm text-white fs-5" style="background-color:#c4b107;" 
             data-bs-toggle="modal"
             data-bs-target="#modalAddApprenant">
         <i class="bi bi-plus-circle me-1 "></i> Ajouter un apprenant
@@ -44,11 +44,17 @@
                             <td>{{ $participant->adresse }}</td>
                             <td>{{ $participant->profession }}</td>
                             <td class="text-center">
-                                <button class="btn btn-sm btn-outline-primary me-1"><i class="bi bi-eye"></i></button>
+                                <button class="btn btn-sm btn-outline-info me-1"
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#modalDetailsApprenant{{ $participant->id }}">
+                                    <i class="bi bi-eye"></i>
+                                </button>
                                 <button class="btn btn-sm btn-outline-warning me-1"><i class="bi bi-pencil-square"></i></button>
                                 <button class="btn btn-sm btn-outline-danger"><i class="bi bi-trash"></i></button>
                             </td>
                         </tr>
+                        {{-- Inclusion du modal de détails pour chaque apprenant --}}
+                        @include('participant.details-apprenant', ['participant' => $participant])
                     @endforeach
                 </tbody>
             </table>
@@ -59,5 +65,6 @@
 
 {{-- Inclusion du modal --}}
 @include('participant.ajout-apprenant') 
+
 
 @endsection

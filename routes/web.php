@@ -32,6 +32,8 @@ Route::get('apprenants', [ParticipantController::class,'apprenants'])->name('app
 Route::get('apprenant/ajout', [ParticipantController::class,'ajoutApprenant'])->name('participant.ajout');
 //La route qui permet de valider l'ajout d'un apprenant
 Route::post('apprenant/ajout/validation', [ParticipantController::class,'store'])->name('participant.store');
+//La route qui permet d'afficher les détails d'un apprenant
+Route::get('apprenant/{id}', [ParticipantController::class,'details'])->name('participant.details');
 
 //La route qui permet d'afficher la liste des inscriptions
 Route::get('inscriptions', [InscriptionController::class,'inscriptions'])->name('inscriptions.liste');

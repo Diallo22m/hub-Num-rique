@@ -4,7 +4,7 @@
     <div class="modal-dialog modal-lg modal-dialog-centered">
         <div class="modal-content border-0 shadow">
 
-            <div class="modal-header ">
+            <div class="modal-header text-white" style="background-color:#c4b107;">
                 <h5 class="modal-title">Enregistrer un Apprenant</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
             </div>
@@ -84,8 +84,8 @@
                 </div>
 
                 <div class="modal-footer">
-                    <button class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
-                    <button type="submit" class="btn btn-primary">Enregistrer</button>
+                    <button class="btn btn-danger" data-bs-dismiss="modal">Annuler</button>
+                    <button type="submit" class="btn btn-success text-white">Enregistrer</button>
                 </div>
             </form>
 

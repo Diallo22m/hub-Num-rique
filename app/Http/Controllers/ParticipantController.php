@@ -48,6 +48,10 @@ class ParticipantController extends Controller
         $participant->save();
         //Redirection vers la liste des apprenants avec un message de succès
         return redirect()->route('apprenants.liste')->with('success', 'Apprenant ajouté avec succès.');
-}
-
+    }
+    //La fonction qui permet d'afficher les détails d'un apprenant
+    public function details($id){
+        $participant = Participant::findOrFail($id);        
+        return view('participant.details-apprenant', compact('participant'));
+        }
 }
