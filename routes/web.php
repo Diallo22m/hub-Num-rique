@@ -25,6 +25,9 @@ Route::get('formation/ajout',[FormationController::class, 'ajourformation'])->na
 Route::get('formateurs', [FormateurController::class,'formateurs'])->name('formateurs.liste');
 //La route qui permet d'afficher le formulaire d'ajout de formateur
 Route::get('formateurs/ajout', [FormateurController::class,'ajoutFormateur'])->name('formateurs.ajout');
+//La route qui permet de valider l'ajout d'un formateur
+Route::post('formateur/ajout/validation', [FormateurController::class,'store'])->name('formateur.store');
+//La route qui permet d'afficher les détails d'un form
 
 //La route qui permet d'afficher la liste des apprenants
 Route::get('apprenants', [ParticipantController::class,'apprenants'])->name('apprenants.liste');
@@ -34,6 +37,10 @@ Route::get('apprenant/ajout', [ParticipantController::class,'ajoutApprenant'])->
 Route::post('apprenant/ajout/validation', [ParticipantController::class,'store'])->name('participant.store');
 //La route qui permet d'afficher les détails d'un apprenant
 Route::get('apprenant/{id}', [ParticipantController::class,'details'])->name('participant.details');
+//La route qui permet de modifier un apprenant
+Route::put('apprenant/{id}/modifier', [ParticipantController::class,'update'])->name('participant.update');
+//La route qui permet de supprimer un apprenant
+Route::delete('apprenant/{id}/supprimer', [ParticipantController::class,'destroy'])->name('participant.destroy');
 
 //La route qui permet d'afficher la liste des inscriptions
 Route::get('inscriptions', [InscriptionController::class,'inscriptions'])->name('inscriptions.liste');

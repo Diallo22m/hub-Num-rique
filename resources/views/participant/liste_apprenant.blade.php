@@ -49,12 +49,25 @@
                                         data-bs-target="#modalDetailsApprenant{{ $participant->id }}">
                                     <i class="bi bi-eye"></i>
                                 </button>
-                                <button class="btn btn-sm btn-outline-warning me-1"><i class="bi bi-pencil-square"></i></button>
-                                <button class="btn btn-sm btn-outline-danger"><i class="bi bi-trash"></i></button>
+                                <button class="btn btn-sm btn-outline-warning me-1"
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#modalEditApprenant{{ $participant->id }}">
+                                    <i class="bi bi-pencil-square"></i>
+                                </button>
+                                <button class="btn btn-sm btn-outline-danger"
+                                    data-bs-toggle="modal"
+                                     data-bs-target="#modalDeleteParticipant{{ $participant->id }}">
+                                    <i class="bi bi-trash"></i>
+                                </button>
+
                             </td>
                         </tr>
                         {{-- Inclusion du modal de détails pour chaque apprenant --}}
                         @include('participant.details-apprenant', ['participant' => $participant])
+                        {{-- Inclusion du modal de modification pour chaque apprenant --}}
+                        @include('participant.apprenant-update', ['participant' => $participant])
+                        {{-- Inclusion du modal de suppression pour chaque apprenant --}}
+                        @include('participant.participant-delete', ['participant' => $participant])
                     @endforeach
                 </tbody>
             </table>
